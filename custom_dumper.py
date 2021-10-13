@@ -44,11 +44,11 @@ schema = {
 
 class CustomDumper(yaml.SafeDumper):
 
-    # def represent_sequence(self, tag, sequence, flow_style=None):
-    #     if len(self.indents) > 2:
-    #         super().represent_sequence(tag, sequence, flow_style=True)
-    #     else:
-    #         super().represent_sequence(tag, sequence, flow_style=False)
+    def represent_mapping(self, tag, mapping, flow_style=None):
+        if "not_null_count" in mapping:
+            return super().represent_mapping(tag, mapping, flow_style=True)
+        else:
+            return super().represent_mapping(tag, mapping, flow_style=False)
 
     def write_line_break(self, data=None):
         super().write_line_break(data)

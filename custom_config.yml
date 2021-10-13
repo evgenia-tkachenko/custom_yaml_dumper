@@ -8,21 +8,13 @@ models:
   - name: id
     description: Primary key for account_fax_settings
     type: integer
-    meta:
-      not_null_count: 9
-      not_null_proportion: 1.0
-      is_unique: true
-      distinct_count: 9
-      distinct_proportion: 1.0
+    meta: {not_null_count: 9, not_null_proportion: 1.0, is_unique: true, distinct_count: 9,
+      distinct_proportion: 1.0}
   - name: account_id
     description: Foreign key for accounts
     type: integer
-    meta:
-      not_null_count: 9
-      not_null_proportion: 1.0
-      is_unique: false
-      distinct_count: 6
-      distinct_proportion: 0.67
+    meta: {not_null_count: 9, not_null_proportion: 1.0, is_unique: false, distinct_count: 6,
+      distinct_proportion: 0.67}
   - name: encrypted_usernumber
     description: ''
     type: character varying
@@ -33,9 +25,5 @@ models:
   - name: id
     description: Primary key for accounts
     type: integer
-    meta:
-      not_null_count: 9
-      not_null_proportion: 1.0
-      is_unique: true
-      distinct_count: 9
-      distinct_proportion: 1.0
+    meta: {not_null_count: 9, not_null_proportion: 1.0, is_unique: true, distinct_count: 9,
+      distinct_proportion: 1.0}
